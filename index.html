@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>xLabsWorld</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/timeline.css" type="text/css" rel="stylesheet"></link>
+  <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection"></link>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+  function _(id){ return document.getElementById(id); }
+
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "detail_name", _("detail_name").value );
+	formdata.append( "detail_email", _("detail_email").value );
+	formdata.append( "detail_number", _("detail_number").value );
+  formdata.append( "detail_website", _("detail_website").value );
+  formdata.append( "detail_desc", _("detail_desc").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "https://lightless-tumble.000webhostapp.com/php/app_register.php");
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h5>Thanks You '+_("detail_name").value+', for your interest in my Portfolio';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+
+  </script>
+
+
+</head>
+<body>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1668407273231841";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+  <header id="showcase" style="background-image: url('img/bg1.jpg');">
+    <h2>Hi, We're xLabsWorld Team. We design & build<br/><span class="ityped"></span></h2>
+    <a href="#footer" class="button">Yes, We're Here To Help You</a>
+    <p>Learn more about what we do<br><a href="#hstart"><i class="material-icons" style="font-weight:bolder;">keyboard_arrow_down</i></a></p>
+    <div class="window"></div>
+  </header>
+
+  <div class="container">
+    <div class="col m12 s12">
+        <h4 class="heading" id="hstart">About Us</h4>
+    </div>
+    <div class="col m12 s12">
+      <p class="about-desc">We’re well known technocrats from Mumbai. We’re in this field of technology for the past 10 years. In a decade we’ve many implemented various projects with customer satisfaction.</p>
+    </div>
+  </div>
+
+  <div class="project-section">
+
+    <div class="container">
+      <div class="col m12 s12">
+          <h4 class="heading">Our Expertise</h4>
+          <p class="sub-title">Want to find out more about us?<a href="mailto:"> Email Us.</a></p>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+  
+        <div class="col m5 s12">
+          <p class="project-done">Web Engineering</p>
+          <p class="project-desc">We build web application and web 
+        </div>
+  
+        <div class="col m6 offset-m1 s12">
+          <img src="img/earlybird.png" class="project-image materialboxed">
+        </div>
+  
+      </div><!--first row close-->
+  
+      <hr class="line">
+  
+      <div class="row" style="margin-top:-30px;">
+  
+        <div class="col m6 s12">
+          <img src="img/nmitd-apps.png" class="project-image materialboxed">
+        </div>
+  
+        <div class="col m5 s12 offset-m1">
+          <p class="project-done">App Engineering</p>
+          <p class="project-desc">we can also create movie app.which will help you to increase you productivity.</p><br>
+        </div>
+  
+  
+      </div><!--second row close-->
+  
+      <div class="row load-class" style="margin-top:60px;">
+        <div class="col m12 s12">
+          <h2 class="load">LOAD MORE</h2>
+        </div>
+      </div>
+  
+      <hr class="line more">
+  
+        <div class="row more" style="margin-top:-30px;">
+  
+          <div class="col m5 s12">
+            <p class="project-done">Cloud Computing</p>
+            <p class="project-desc">We can create cloud computing app which will help you access data any time.</p><br>
+          </div>
+  
+          <div class="col m6 offset-m1 s12">
+            <img src="img/Cloud-App.png" class="project-image materialboxed">
+          </div>
+  
+        </div><!--third row close-->
+  
+      <div><!--container close close-->
+  
+  
+  </div>
+  </div>
+  </div><!--project section div close-->
+
+
+</div>
+
+
+  <div class="container">
+    <div class="col m12 s12">
+      <h4 class="heading">Modus Operandi</h4>
+  </div>
+    <div class="modus"  style="margin-bottom: 120px;margin-top: 60px;">
+      
+        <div class="row">
+            <div class="col s12 m4">
+              <div class="card">
+                <div class="card-image">
+                  <img src="img/mobg1.jpg" class="modulo-img materialboxed">
+                  
+                </div>
+                <div class="card-action">
+                  <a href="#">Architecture 1</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="img/mobg2.jpg" class="modulo-img materialboxed">
+                   
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Architecture 2</a>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col s12 m4">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="img/mobg3.jpg" class="modulo-img materialboxed">
+                   
+                  </div>
+                  <div class="card-action">
+                    <a href="#">Architecture 3</a>
+                  </div>
+                </div>
+            </div>
+  
+        </div>
+
+    </div>  <!--close modulos -->
+     
+  </div><!--close div -->
+
+
+  
+  <div class="container" style="margin-bottom: 60px;margin-top: 120px;">
+      <div class="col m12 s12">
+        <h4 class="heading">Our Team</h4>
+        <div class="divider"></div>
+      </div>
+  </div> <!--contaiiner close--> 
+
+  <div class="container">
+      <div class="row">
+            
+            <div class="col s12 m4 offset-m2">
+              <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light si-img">
+                    <img class="activator" src="img/team1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Akshay Patel<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">Developer</a></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Akshay Patel<i class="material-icons right">close</i></span>
+                    <p>Creating new design and feature is my job if you have any suggestion email us.</p>
+                  </div>
+                </div> 
+            </div>    
+                          
+            <div class="col s12 m4">
+              <div class="card">
+                  <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="img/team1.jpg">
+                  </div>
+                  <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Omkar Vilankar<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">Testor</a></p>
+                  </div>
+                  <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
+                    <p>If you find any bug please repot to me.</p>
+                  </div>
+              </div>
+           </div> 
+
+
+      </div>     
+  </div>      
+
+    <div class="container-fluid">
+      <div class="col m12 s12">
+        <h4 class="heading">Contact Us</h4>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6">
+              <div class="card">
+                <div class="card-image">
+                 <iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=OMKARESHWAR+DHAM+SOC,+Mira+Road+East,+Mira+Bhayandar,+Maharashtra,+India&key=AIzaSyAJ-p3sa-A8nTzY4JX4tFt-GmehGQNuayA" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe> 
+                 <span class="card-title"></span>
+                </div>
+                <div class="card-content">
+                  <p><b>XLabsworld</b></p>
+                  <div class="divider"></div><br>
+                  <p><b>Address:</b>  Omkareshwar Dham, Shop No 3,EduTech, Opp RBK Global School</p>
+                  <p><b>Phone:</b> +91 9819477977</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card">
+                  <div class="card-image">
+                      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fxlabsworld%2F&tabs=timeline&width=800&height=335&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="335" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                     <span class="card-title"></span>
+                  </div>
+                </div>
+              </div>
+
+          </div>   
+    </div><!--close contact row-->
+  </div>
+
+
+  <a href="#" class="back-to-top pulse"><i class="material-icons" style="margin-top:-5px;margin-left:-2px;">keyboard_arrow_up</i></a>
+  
+    <footer class="page-footer foo" id="footer">
+     <div class="container">
+       <div class="row">
+         <div class="col l6 s12">
+           <h5 class="white-text" style="text-weight:bolder;">Want to work together?</h5>
+           <p class="grey-text text-lighten-4">We're currently accepting new projects and would love to hear about yours. Please take a few minutes to tell me about it.<br><br>After you introduce yourself and your project, I'll get in touch with you to schedule a time to chat. You should expect to hear from me in a day or so.</p><br><br>
+         </div>
+         <form id="my_form" onsubmit="submitForm(); return false;">
+         <div class="col l4 offset-l2 s12">
+           <h5 class="white-text" style="font-size:22px;">Ok, just a few quick questions.</h5>
+             <div class="input-field col s6">
+               <input id="detail_name" type="text" class="validate" required>
+               <label for="last_name">Name*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_email" type="email" class="validate" required>
+               <label for="email">Email*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_number" type="text" class="validate" required title="Invalid Phone Number" pattern="[789][0-9]{9}">
+               <label for="last_name">Phone Number*</label>
+             </div>
+             <div class="input-field col s6">
+               <input id="detail_website" type="text" class="validate" required>
+               <label for="last_name">Website</label>
+             </div>
+             <div class="input-field col s12">
+                <textarea id="detail_desc" class="materialize-textarea" required></textarea>
+                <label for="textarea1">Tell Me About Project... What Is It?*</label>
+             </div>
+             <div class="col s12">
+               <input type="submit" value="Submit Your Project" id="mybtn" class="subdesign visit-link" style="background-color:#252A30;color:white;" /><br>
+               <span id="status"></span>
+             </div>
+         </div>
+        </form>
+       </div>
+     </div>
+     <div class="footer-copyright blue-grey darken-4">
+       <div class="container">
+        &copy; 2018 All rights reserved | Design by XLabsworld
+       <a class="grey-text text-lighten-4 right" href="#!"></a>
+       </div>
+     </div>
+
+   </footer>
+
+  
+
+  <!--  Scripts-->
+  
+  <script src="js/materialize.js"></script>
+  <script src="js/functions.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/ityped.min.js"></script>
+  
+  <script type="text/javascript">
+    window.ityped.init(document.querySelector('.ityped'), {
+            strings : ['cloud application.', 'web applications.','business websites.'],
+            loop : true
+        });
+  </script>
+
+
+  </body>
+</html>
